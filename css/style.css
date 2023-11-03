@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+h1{
+    margin: 1.5rem;
+}
+
+h2{
+    margin: 1.5rem;
+}
+
+p{
+    margin: 0.6rem;
+}
+
+p:hover{
+    cursor: pointer;
+}
+
+span{
+    color: darkgrey;
+}
+
+.unset{
+    background-color: none;
+}
+
+.set{
+    background-color: yellow;
+}
+
+button{
+    width: 45px;
+    height: 55px;
+    background-color: brown;
+    color: white;
+    margin-bottom: 0.5px;
+    order: 5;
+}
+
+#r1{
+ order: 1;
+}
+
+#r2{
+    order: 2;
+}
+
+#r3{
+    order: 3;
+}
+
+#r4{
+    order: 4;
+}
