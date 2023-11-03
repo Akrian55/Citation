@@ -47,11 +47,40 @@ function addText() {
 
 function moveText() {
     up.addEventListener("click", function(){
-        if (click === document.getElementById("r1")) {
-            
+        if (click) {
+            const totalItems = texts.length;
+            const clickedOrder = parseInt(click.style.order);
+
+            for (let i = 0; i < totalItems; i++) {
+                let currentOrder = parseInt(texts[i].style.order);
+                if (currentOrder === 1) {
+                    texts[i].style.order = totalItems;
+                } else {
+                    texts[i].style.order = currentOrder - 1;
+                }
+            }
+
+            click.style.order = clickedOrder === 1 ? totalItems : clickedOrder - 1;
         }
-    })
+    });
+
     down.addEventListener("click", function(){
-        
-    })
+        if (click) {
+            const totalItems = texts.length;
+            const clickedOrder = parseInt(click.style.order);
+
+            for (let i = 0; i < totalItems; i++) {
+                let currentOrder = parseInt(texts[i].style.order);
+                if (currentOrder === totalItems) {
+                    texts[i].style.order = 1;
+                } else {
+                    texts[i].style.order = currentOrder + 1;
+                }
+            }
+
+            click.style.order = clickedOrder === totalItems ? 1 : clickedOrder + 1;
+        }
+    });
 }
+
+moveText();
